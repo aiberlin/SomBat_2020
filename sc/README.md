@@ -20,9 +20,17 @@ ToDo: make HW interface incl. python xlator. Copy OSC addresses from here.
 ### hAddenda
 these are [Quarks](https://doc.sccode.org/Guides/UsingQuarks.html) dependencies: 
 
-- Vowel
-- Modality
+- adclib
+- Influx
+- JITLibExtensions
+- Modality-toolkit
 - Morse 
+- SafetyNet
+- Vowel
+
+[ “JITLibExtensions”, “adclib”, “Influx”, “Modality-toolkit”, “Morse”, “Vowel”, "SafetyNet" ].do(Quarks.install(_));
+
+
 
 ToDo: find right place for them in Raspi's dir structure so sclang finds 'em.
 
