@@ -17,8 +17,8 @@ this goes into Raspi's home dir;
 ToDo: make HW interface incl. python xlator. Copy OSC addresses from here. 
 - the other file, "touchosc-SomBat.desc.scd" is a SC description for the incoming SC commands in the Modality format. 
 
-### hAddenda
-these are [Quarks](https://doc.sccode.org/Guides/UsingQuarks.html) dependencies: 
+### localQuarks
+these are [Quarks](https://doc.sccode.org/Guides/UsingQuarks.html) dependencies to bestored locally: 
 
 - adclib
 - Influx

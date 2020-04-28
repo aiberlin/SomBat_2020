@@ -128,7 +128,7 @@ Ndef(\sombat_imp, {|gateSomBat=0|
 
 
 (
-Ndef('formanta2', { |gateSomBat=0|
+Ndef('sombat_formanta', { |gateSomBat=0|
 	var mainFr = Ndef(\joystick).kr(1,1).lag(0.2, 2).linexp(0,1, 1/3, 200) * [1, Rand(1/1.02, 1.02)];
 	var ffr = Ndef(\joystick).kr(1,0).lag(0.1).linexp(0,1, 180, s.sampleRate/2/3);
 	var bw =
@@ -138,7 +138,7 @@ Ndef('formanta2', { |gateSomBat=0|
 		Formant.ar(
 			mainFr,
 			[ffr, DelayN.kr(ffr.lag3(4), 5, 5)],
-			bw.round.poll,
+			bw.round,
 			0.75
 		),
 		30//, [-1,1]
