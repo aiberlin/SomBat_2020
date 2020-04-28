@@ -1,0 +1,77 @@
+compiling class library...
+	Found 845 primitives.
+	Compiling directory '/usr/share/SuperCollider/SCClassLibrary'
+	Compiling directory '/usr/share/SuperCollider/Extensions'
+	Compiling directory '/home/patch/.local/share/SuperCollider/Extensions'
+	numentries = 1172269 / 17587140 = 0.067
+	5601 method selectors, 3140 classes
+	method table size 9470396 bytes, big table size 70348560
+	Number of Symbols 14159
+	Byte Code Size 402689
+	compiled 443 files in 1.71 seconds
+
+Info: 4 methods are currently overwritten by extensions. To see which, execute:
+MethodOverride.printAll
+
+compile done
+localhost : setting clientID to 0.
+internal : setting clientID to 0.
+Class tree inited in 0.11 seconds
+
+
+*** Welcome to SuperCollider 3.10.0. *** For help type ctrl-c ctrl-h (Emacs) or :SChelp (vim) or ctrl-U (sced/gedit).
+*** hh autostart script running
+*** s.bootin'
+Booting server 'localhost' on address 127.0.0.1:57110.
+sc3> 
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> 
+Exiting sclang (ctrl-D)
+sc3> main: waiting for input thread to join...
+main: quitting...
+cleaning up OSC
