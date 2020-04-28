@@ -2,9 +2,16 @@
  
  everything SuperCollider related
 
+####ToDo:
+- merge nu osx code into linux code, incl. local Quarks and all
+- unify code for linux headless and laptop, with better instructions for laptop use. 
+- add cheat key combos for ending all current sounds: both switches together. 
+- don't use pot for amp - use amp's pot instead! So, pot is free as mod wheel ... :)
+- granular player for long samples ! overlap, don't stop, for polyphonic textures. stop 'em with the cheat. Joy maps to stretch and pitch. 
+- add a Master FX ? Safty net etc. 
+- adjust levels of loud ones to the softer ones. 
 
-
-## Folder Structure:
+## SC Folder Structure:
 
 ### scwork
 this goes into Raspi's home dir; 
@@ -14,11 +21,11 @@ this goes into Raspi's home dir;
 ### scwork/SomBat-touchosc
 
 - "SomBat2.touchosc" is a TouchOsc layout to simulate the SomBat's HW interface. 
-ToDo: make HW interface incl. python xlator. Copy OSC addresses from here. 
+Done: make HW interface incl. python xlator. Copy OSC addresses from here. 
 - the other file, "touchosc-SomBat.desc.scd" is a SC description for the incoming SC commands in the Modality format. 
 
 ### localQuarks
-these are [Quarks](https://doc.sccode.org/Guides/UsingQuarks.html) dependencies to bestored locally: 
+these are [Quarks](https://doc.sccode.org/Guides/UsingQuarks.html) dependencies to be stored locally: 
 
 - adclib
 - Influx
@@ -32,10 +39,10 @@ these are [Quarks](https://doc.sccode.org/Guides/UsingQuarks.html) dependencies 
 
 
 
-ToDo: find right place for them in Raspi's dir structure so sclang finds 'em.
+ToDo: find right place for them in Raspi's dir structure so sclang finds 'em. >> local Quarks !
 
 ### usbStickSounds
-these should be optionally residing on a connectd USB stick; auto loaded if present. 
+these are optionally residing on a connectd USB stick; auto loaded if present. (fstab entry!)
 
 
 ### unused
