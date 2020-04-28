@@ -1,5 +1,12 @@
 // ToDo:
-- add 1 RGB LED to 3 GPIO pins of Raspi, write SC>OSC>Python code. 
+- draw schematics of the 2 soldered boards
+- track wiring precisely - otherwise Python code needs to be adapted for each individual item. 
+x [done] add 1 RGB LED to 3 GPIO pins of Raspi: pins [23, 24, 25] on Audio Bonnet
+- write SC>OSC>Python code for LED. 
+    - solid color for Synth mode
+    - slowly blinking for Sample mode
+    - hsv cycle thru the synth list / sample list in the respective modes. 
+
 
 # SomBat_2020
 ## Hardware overview
@@ -17,7 +24,7 @@
 - into Amp 
 - parallel out from amp to Raspi's Step-Down power converter (based on XL4015) Trim output voltage to 5.0 V !
 
-![2-power-section](fotos/2-power-section-2.JPG)
+![2-power-section](fotos/2-power-section.JPG)
 
 - converter 5V out to USB mico jack to Raspi in, or solder directy onto raspi board (careful!)
 
@@ -67,9 +74,6 @@ small interface board soldered on striped perfboard to connect mcp3008 with pin 
 ![5-mcp3008-board-wiring](fotos/6-mcp3008-board-closeup.JPG)
 ![5-mcp3008-board-wiring](fotos/7-mcp3008-board-back.JPG)
 back side foto mirrors horizontally
-
-
-  ".JPG", "8-input-switches-front.JPG", "9-input-switches-back.JPG", "10-analog-controls.JPG  " 
 
 
 ### 6. input switches
