@@ -14,7 +14,7 @@ x [done] add 1 RGB LED to 3 GPIO pins of Raspi: pins [23, 24, 25] on Audio Bonne
 
 ### 1. entire system assembled
  
-![1-entire system assembled.JPG](fotos/1-entire system assembled.JPG)
+![1-entire system assembled.JPG](fotos/1-entire-system-assembled.JPG)
 
 ### 2. power section
 
@@ -38,7 +38,7 @@ Audio Bonnet on Raspi accomodates pin headers for connecting
 - mcp3008 input board
 - RGB LED (ToDo)
 
-![input subsys-overview](fotos/3-input subsys-overview.JPG)
+![input subsys-overview](fotos/3-input-subsys-overview.JPG)
 
 ### 4. AudioBonnet wiring
 
@@ -47,7 +47,7 @@ Audio Bonnet on Raspi accomodates pin headers for connecting
 A 4 stranded flat wire goes to the mcp3008 board, as well as
 - GND + 3.3V from pin triple near the audio jack. 
 
-![4-AudioBonnet-MOSI til Pin5, GND + 3.3V](fotos/4-AudioBonnet-MOSI til Pin5, GND + 3.3V.JPG)
+![4-AudioBonnet-MOSI til Pin5, GND + 3.3V](fotos/4-AudioBonnet.JPG)
 
 ### 5. mcp3008-board-wiring
 
