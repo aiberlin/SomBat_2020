@@ -8,8 +8,7 @@ x [done] add 1 RGB LED to 3 GPIO pins of Raspi: pins [23, 24, 25] on Audio Bonne
     - hsv cycle thru the synth list / sample list in the respective modes. 
 
 
-# SomBat_2020
-## Hardware overview
+# SomBat_2020 - Hardware overview
 
 
 ### 1. entire system assembled
