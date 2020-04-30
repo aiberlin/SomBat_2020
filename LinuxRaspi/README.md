@@ -24,6 +24,7 @@ in theory you have to create asound.conf, but it doesn't seem necessary.
 
 install python 3.6  
 ```tce-load -wi python3.6.tcz```
+
 install pip  
 ```
 mkdir cd /home/tc/pip3
@@ -31,6 +32,7 @@ cd /home/tc/pip3
 wget https://bootstrap.pypa.io/get-pip.py
 sudo -H python3.6 get-pip.py
 ```
+
 temporarily load development libraries  
 ```tce-load -wil compiletc python3.6-dev```
 
@@ -47,7 +49,7 @@ save the local storage
 ```filetool.sh -b```
 
 ## sombat codebase
-probably better to create a tcz with only the needed parts, but for now this works:  
+we should either create a tcz with only the needed parts, or see how to just download files and not the whole git stuff, but for testing now this works:  
 ```
 git clone https://github.com/aiberlin/SomBat_2020/
 rm -rf SomBat_2020/HW SomBat_2020/varia SomBat_2020/LinuxRaspi
@@ -64,7 +66,7 @@ filetool.sh -b
 sudo reboot
 ```
 
-you should see the infamous loading sound :)
+you should hear the infamous loading sound :)
 
 
 
