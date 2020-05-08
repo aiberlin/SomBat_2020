@@ -16,6 +16,7 @@
 ### scwork
 this goes into Raspi's home dir; 
 
+### scwork/autoload
 - sclang is told to start with file ~/scwork/_startup.scd and the rest will autostart automagically. (Routine that loads all *.scd files in the "autoload" subdir)
 
 ### scwork/SomBat-touchosc
@@ -24,7 +25,7 @@ this goes into Raspi's home dir;
 Done: make HW interface incl. python xlator. Copy OSC addresses from here. 
 - the other file, "touchosc-SomBat.desc.scd" is a SC description for the incoming SC commands in the Modality format. 
 
-### localQuarks
+### scwork/localQuarks
 these are [Quarks](https://doc.sccode.org/Guides/UsingQuarks.html) dependencies to be stored locally: 
 
 - adclib
@@ -35,15 +36,21 @@ these are [Quarks](https://doc.sccode.org/Guides/UsingQuarks.html) dependencies 
 - SafetyNet
 - Vowel
 
-[ “JITLibExtensions”, “adclib”, “Influx”, “Modality-toolkit”, “Morse”, “Vowel”, "SafetyNet" ].do(Quarks.install(_));
+
+ToDo: find right place for them in Raspi's dir structure so sclang finds 'em. >> local Quarks > point to them with .yaml file and 
+
+-  include Quarks location in yaml:
+- add yaml path as -l option to sclang call in autostart:
+```    
+    ./sclang -a -l ~/path/to/sclang_sombat.yaml mycode.scd
+```
 
 
+### scwork/unused
+scraps and recyclables
 
-ToDo: find right place for them in Raspi's dir structure so sclang finds 'em. >> local Quarks !
+### defaultSounds
 
-### usbStickSounds
-these are optionally residing on a connectd USB stick; auto loaded if present. (fstab entry!)
+we look for sounds stored on external memory stick (fstab entry!), 
+but if absent, we can load these. 
 
-
-### unused
-well...:)
