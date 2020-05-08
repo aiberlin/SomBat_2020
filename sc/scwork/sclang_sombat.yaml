@@ -1,0 +1,8 @@
+# include yaml >> Quarks location:
+# ./sclang -a -l ~/supercolliderStandaloneRPI2/sclang.yaml mycode.scd
+
+includePaths:
+    - SCClassLibrary
+postInlineWarnings: false
+excludeDefaultPaths: true
+project: true

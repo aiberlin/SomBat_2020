@@ -28,7 +28,6 @@ if( foldersThere ){
 		if(sfpaths.notEmpty){
 			var bufList = List[];
 			q.bufDict.put(folda.asSymbol, bufList);
-			/*bufList = */
 			sfpaths.collect{|p|
 				Buffer.readChannel(s, p, channels: [0], action: {|buf|
 					buf.normalize;

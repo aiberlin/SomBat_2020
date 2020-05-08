@@ -80,13 +80,20 @@ q.mktl.elAt(\toggle).action = {arg el;
 	{
 		q.osc.mode = \synthe;
 		MFdef(\trigs).mode_(\synthe);
+		// MFdef(\led).mode_(\synthe);
+		MFdef(\ledToggler).value(q.osc.mode);
 	}
 	{
 		q.osc.mode = \sample;
 		MFdef(\trigs).mode_(\sample);
+		// MFdef(\led).mode_(\sample);
+		MFdef(\ledToggler).value(q.osc.mode);
 	};
 	if(q.verbose){ "q.osc.mode = ".post; q.osc.mode.postln }
 };
+
+
+// q.mktl.elAt(\toggle).value; // trigger to the current button state on startup!
 
 // ***********************************************************************
 // 2. switches to navigate samples. Do also RGB LED !
@@ -128,8 +135,8 @@ q.osc.ndefs.synthe = [Ndef('sombat_blip'), Ndef('sombat_sine'), Ndef('sombat_vox
 q.osc.ndefs.sample = [ Ndef('sampleJoyLoopCut'), Ndef('sampleJoy'), Ndef('sampleJoyLoop2') ]; // just keep 3 sample Ndefs
 
 
-// q.osc.ndefs.synthe.do(_.play); // maybe better use .play/stop in the trig action rather than the gate ???
-// q.osc.ndefs.sample.do(_.play); // maybe better use .play/stop in the trig action rather than the gate ???
+// q.osc.ndefs.synthe.do(_.play); // maybe better use .play/stop in the trig action rather than the gate ??? YES!!!
+// q.osc.ndefs.sample.do(_.play); // maybe better use .play/stop in the trig action rather than the gate ??? YES!!!
 q.osc.ndefs.synthe.do(_.set(\gateSomBat, 1) );
 q.osc.ndefs.synthe.do(_.stop );
 q.osc.ndefs.sample.do(_.set(\gateSomBat, 1) );
@@ -160,7 +167,6 @@ q.mktl.elAt(\trig).do{ |el, i|
 (
 MFdef(\trigs, [
 	\test,  { arg el, i; ["test mode", i, el.value].postcln; },
-
 ]);
 );
 MFdef(\trigs).add(\synthe, { arg el, i;
