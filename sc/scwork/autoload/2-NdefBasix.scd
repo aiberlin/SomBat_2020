@@ -1,6 +1,6 @@
 if(q.hasGui){
 	NdefMixer(s);
-	s.scope;
+//	s.scope;
 };
 
 

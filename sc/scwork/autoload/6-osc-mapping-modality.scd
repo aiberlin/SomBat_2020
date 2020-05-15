@@ -7,7 +7,7 @@ q.desc = MKtlDesc.fromPath("../SomBat-touchosc/touchosc-SomBat.desc.scd".resolve
 
 q.mktl.free;
 q.mktl = MKtl(\sombat, q.desc);
-
+/*
 if(q.hasGui){
 	q.mkgui = q.mktl.gui;
 
@@ -29,7 +29,7 @@ if(q.hasGui){
 
 	Ndef(\joystick).gui;
 };
-
+*/
 );
 
 // trace to look what address the touchOSC app sends from:
@@ -41,15 +41,37 @@ if(q.hasGui){
 q.mktl.trace;
 q.mktl.elementGroup;
 q.mktl.postElements;
+
+address: a NetAddr(127.0.0.1, 33889)
+
 */
 // set the address to the one you see in the trace:
 
 if (q.myname == "adc") {
-	q.mktl.device.updateSrcDstAddr("192.168.178.55", 9000);
+	q.mktl.device.updateSrcDstAddr("127.0.0.1", 9000);
 } {
-	q.mktl.device.updateSrcDstAddr("192.168.178.181", 9000);
+	q.mktl.device.updateSrcDstAddr("127.0.0.1", 52560);
 }
 );
+
+// python keeps changing sending port nr; so we catch it here:
+
+[
+	'/1/xy1',
+	'/1/fader1',
+	'/1/toggleM',
+	'/1/switch1',
+	'/1/switch1',
+	'/1/trig1',
+	'/1/trig2',
+	'/1/trig3'
+].do{ |tag|
+
+	OSCFunc({ arg x,msg, ad;
+	//	 ad.postln;
+		 q.mktl.device.updateSrcDstAddr(ad.hostname , ad.port);
+	}, tag.asString).oneShot;
+};
 
 // ***********************************************************************
 // ***********************************************************************
@@ -61,7 +83,7 @@ if (q.myname == "adc") {
 (
 /// basic continuous ctl > right to Server
 
-q.mktl.elAt(\fader).action = {arg el; Ndef(\ampBus).set(\amp, \amp.asSpec.map(el.value)) };
+q.mktl.elAt(\fader).action = {arg el; Ndef(\ampBus).set(\amp, \amp.asSpec.map(el.value).postln) };
 q.mktl.elAt(\xy, \x).action = {arg el; Ndef(\joystick).set(\x, (el.value)) };
 q.mktl.elAt(\xy, \y).action = {arg el; Ndef(\joystick).set(\y, (1-el.value)) };
 );
@@ -69,7 +91,7 @@ q.mktl.elAt(\xy, \y).action = {arg el; Ndef(\joystick).set(\y, (1-el.value)) };
 // ***********************************************************************
 // ***********************************************************************
 // client side Button handling, modes!
-
+// q.mktl.elAt(\toggle).value;
 (
 // ***********************************************************************
 // 1. toggle for modes
@@ -106,7 +128,11 @@ q.mktl.elAt(\switch1).action = { arg el;
 		if(q.verbose){
 			"Switching << LEFT = UP".postln;
 			"q.osc.indices[%] = % \n".postf(q.osc.mode, indx);
-		}
+		};
+		if(q.mktl.elAt(\switch2).isOn){ // double click
+			q.longones.endAll.value;
+			Ndef.all.localhost.do(_.stop);
+		};
 	}
 };
 q.mktl.elAt(\switch2).action = { arg el;
@@ -117,7 +143,11 @@ q.mktl.elAt(\switch2).action = { arg el;
 		if(q.verbose){
 			"Switching >> RIGHT = LO".postln;
 			"q.osc.indices[%] = % \n".postf(q.osc.mode, indx);
-		}
+		};
+		if(q.mktl.elAt(\switch1).isOn){ // double click
+			q.longones.endAll.value;
+			Ndef.all.localhost.do(_.stop);
+		};
 	}
 };
 
@@ -132,7 +162,7 @@ q.osc.ndefs = ();
 
 q.osc.ndefs.synthe = [Ndef('sombat_blip'), Ndef('sombat_sine'), Ndef('sombat_vox'), Ndef(\sombat_noyz), Ndef(\sombat_noyzLP), Ndef('sombat_formanta'), Ndef(\sombat_noyzHP), Ndef(\sombat_imp)];
 
-q.osc.ndefs.sample = [ Ndef('sampleJoyLoopCut'), Ndef('sampleJoy'), Ndef('sampleJoyLoop2') ]; // just keep 3 sample Ndefs
+q.osc.ndefs.sample = [ Ndef('sampleJoyLoopCut'), Ndef('sampleDummy'), Ndef('sampleJoyLoop2') ]; // just keep 3 sample Ndefs
 
 
 // q.osc.ndefs.synthe.do(_.play); // maybe better use .play/stop in the trig action rather than the gate ??? YES!!!
@@ -191,7 +221,13 @@ MFdef(\trigs).add(\sample, { arg el, i;
 		"> OnOff BufNum % ** % ** to %\n".postf(buf, maSynth.key, el.value.asInteger);
 	};
 	// maSynth.set('gateSomBat', el.value, 'buf', buf).send;
-	if(el.isOn){ maSynth.set('buf', buf).send.play; }{ maSynth.stop; };  // modern style
+	if(el.isOn){
+		if(i==1){
+			q.longones.trigNew(buf);
+		};
+		maSynth.set('buf', buf).send.play;
+
+	}{ maSynth.stop; };  // modern style
 });
 
 

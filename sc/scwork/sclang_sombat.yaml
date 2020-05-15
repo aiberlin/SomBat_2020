@@ -1,8 +1,11 @@
-# include yaml >> Quarks location:
 # ./sclang -a -l ~/supercolliderStandaloneRPI2/sclang.yaml mycode.scd
 
+# these 2 paths must be correct:
 includePaths:
-    - SCClassLibrary
+#default SC Class Library
+    -   /usr/share/SuperCollider/SCClassLibrary
+# SomBat Class extensions
+    -   /home/patch/scwork/localQuarks
+excludePaths:
+    []
 postInlineWarnings: false
-excludeDefaultPaths: true
-project: true

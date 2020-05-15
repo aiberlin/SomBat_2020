@@ -1,0 +1,3 @@
+# add to etc/fstab for USB stick autoboot to /mnt/sombat2020.
+# make dir before!?!
+dev/sda1 /mnt/sombat2020 vfat defaults,auto,users,rw,nofail,umask=000,x-systemd$

@@ -34,6 +34,7 @@ these are [Quarks](https://doc.sccode.org/Guides/UsingQuarks.html) dependencies 
 - Modality-toolkit
 - Morse 
 - SafetyNet
+- Utopia (for networked live coding)
 - Vowel
 
 

@@ -1,0 +1,231 @@
+compiling class library...
+libEGL warning: DRI2: failed to authenticate
+	Found 845 primitives.
+	Compiling directory '/usr/share/SuperCollider/SCClassLibrary'
+	Compiling directory '/home/patch/scwork/localQuarks'
+	numentries = 978060 / 16356970 = 0.06
+	6455 method selectors, 2534 classes
+	method table size 8314948 bytes, big table size 65427880
+	Number of Symbols 14616
+	Byte Code Size 456889
+	compiled 442 files in 2.60 seconds
+
+Info: 12 methods are currently overwritten by extensions. To see which, execute:
+MethodOverride.printAll
+
+compile done
+localhost : setting clientID to 0.
+internal : setting clientID to 0.
+Safety('localhost') enabled.
+Safety('internal') enabled.
+Class tree inited in 0.25 seconds
+
+
+*** Welcome to SuperCollider 3.10.0. *** For help type ctrl-c ctrl-h (Emacs) or :SChelp (vim) or ctrl-U (sced/gedit).
+*** my username is: patch
+
+*** hh autostart script running
+*** killing jackd
+*** starting jackd
+exec: no process found
+scsynth: no process found
+jackd(457): Operation not permitted
+jackd: no process found
+*** my username is: patch
+
+*** hh autostart script running
+*** killing jackd
+exec: no process found
+scsynth: no process found
+jackd(457): Operation not permitted
+jackd: no process found
+jackdmp 1.9.12
+Copyright 2001-2005 Paul Davis and others.
+Copyright 2004-2016 Grame.
+Copyright 2016-2017 Filipe Coelho.
+jackdmp comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it
+under certain conditions; see the file COPYING for details
+JACK server starting in realtime mode with priority 75
+self-connect-mode is "Don't restrict self connect requests"
+Failed to connect to session bus for device reservation: /usr/bin/dbus-launch terminated abnormally without any error message
+
+Audio device hw:0 cannot be acquired...
+Cannot initialize driver
+To bypass device reservation via session bus, set JACK_NO_AUDIO_RESERVATION=1 prior to starting jackd.
+
+JackServer::Open failed with -1
+Failed to open server
+// end
+*** s.bootin'
+*** starting jackd
+Booting server 'localhost' on address 127.0.0.1:57110.
+jackdmp 1.9.12
+Copyright 2001-2005 Paul Davis and others.
+Copyright 2004-2016 Grame.
+Copyright 2016-2017 Filipe Coelho.
+jackdmp comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it
+under certain conditions; see the file COPYING for details
+JACK server starting in realtime mode with priority 75
+self-connect-mode is "Don't restrict self connect requests"
+Failed to connect to session bus for device reservation: /usr/bin/dbus-launch terminated abnormally without any error message
+
+Audio device hw:0 cannot be acquired...
+Cannot initialize driver
+To bypass device reservation via session bus, set JACK_NO_AUDIO_RESERVATION=1 prior to starting jackd.
+
+JackServer::Open failed with -1
+Failed to open server
+Found 0 LADSPA plugins
+JackDriver: client name is 'SuperCollider'
+SC_AudioDriver: sample rate = 48000.000000, driver's block size = 64
+JackDriver: couldn't connect  system:midi_capture_1 to SuperCollider:in_1
+JackDriver: connected  SuperCollider:out_1 to system:playback_1
+JackDriver: max output latency 2.7 ms
+JackDriver: connected  SuperCollider:out_2 to system:playback_2
+SuperCollider 3 server ready.
+// end
+Requested notification messages from server 'localhost'
+localhost: server process's maxLogins (1) matches with my options.
+localhost: keeping clientID (0) as confirmed by server process.
+*** s.bootin'
+server 'localhost' already booting
+Safety('localhost') is running, using 'safeClip_2'.
+Shared memory server interface initialized
+*** s.booted
+*** loading autostart file 0_startupSounds.scd
+*** s.booted
+*** loading autostart file 0_startupSounds.scd
+*** loading autostart file 1_loadSamples.scd
+/mnt/sombat2020/long
+/mnt/sombat2020/short
+cool: Sample path // USB Stick present!
+// /mnt/sombat2020/long/*
+// /mnt/sombat2020/short/*
+*** loading autostart file 1_loadSamples.scd
+/mnt/sombat2020/long
+/mnt/sombat2020/short
+cool: Sample path // USB Stick present!
+// /mnt/sombat2020/long/*
+// /mnt/sombat2020/short/*
+*** loading autostart file 2-NdefBasix.scd
+*** loading autostart file 2-NdefBasix.scd
+*** loading autostart file 3_samplePlay.scd
+*** loading autostart file 3_samplePlay.scd
+*** loading autostart file 4-SomBat2-sampleSounds.scd
+*** loading autostart file 4-SomBat2-sampleSounds.scd
+*** loading autostart file 4-SomBat2-synthSounds.scd
+*** loading autostart file 4-SomBat2-synthSounds.scd
+*** loading autostart file 5-SomBat2-sampleSoundsLong.scd
+*** loading autostart file 5-SomBat2-sampleSoundsLong.scd
+*** loading autostart file 6-osc-mapping-modality.scd
+
+/* OSC devices not found automagically yet. Use OSCMon: */
+o = OSCMon.new.enable.show;
+*** loading autostart file 6-osc-mapping-modality.scd
+MFdef - ignore args here for now...
+*** loading autostart file 7-RGB_LED.scd
+*** loading autostart file 7-RGB_LED.scd
+MFdef - ignore args here for now...
+MFdef - ignore args here for now...
+
+
+COOL ! loaded the following Samples into .short:
+
+000005E2.wav
+000005F5.wav
+000005F6.wav
+00000619.wav
+0000061A.WAV
+00000628.wav
+00000646.wav
+00000654.wav
+4_luciperionem.aiff
+belugaC5.aif
+cachalot11Y.aiff
+
+loaded the following Samples into .long:
+
+aBelugaMIXUP_Can.aif
+AnnuncioFermata22740_1(7).aif
+cachalot click 2
+doepfi2.aif
+LegoPiano.aiff
+philip1.aif
+pulsarcrab.aif
+
+
+
+
+
+COOL ! loaded the following Samples into .short:
+
+000005E2.wav
+000005F5.wav
+000005F6.wav
+00000619.wav
+0000061A.WAV
+00000628.wav
+00000646.wav
+00000654.wav
+4_luciperionem.aiff
+belugaC5.aif
+cachalot11Y.aiff
+
+loaded the following Samples into .long:
+
+aBelugaMIXUP_Can.aif
+AnnuncioFermata22740_1(7).aif
+cachalot click 2
+doepfi2.aif
+LegoPiano.aiff
+philip1.aif
+pulsarcrab.aif
+
+
+
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
+0.0
+1.8448004776997e-06
