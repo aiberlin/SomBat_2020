@@ -1,8 +1,14 @@
-// ToDo:
-- draw schematics of the 2 soldered boards
+**// ToDo:**
+- draw schematics of button board
+- document LED wiring !!
 - track wiring precisely - otherwise Python code needs to be adapted for each individual item. 
-x [done] add 1 RGB LED to 3 GPIO pins of Raspi: pins [23, 24, 25] on Audio Bonnet
-- write SC>OSC>Python code for LED. 
+
+
+DONE
+add 1 RGB LED to 3 GPIO pins of Raspi: pins [23, 24, 25] on Audio Bonnet
+add 1 R power LED across 5V
+DONE:
+	- write SC>OSC>Python code for LED. 
     - solid color for Synth mode
     - slowly blinking for Sample mode
     - hsv cycle thru the synth list / sample list in the respective modes. 
@@ -51,7 +57,7 @@ A 4 stranded flat wire goes to the mcp3008 board, as well as
 ### 5. mcp3008-board-wiring
 
 small interface board soldered on striped perfboard to connect mcp3008 with pin headers to interface elements AND SPI on AudioBonnet. 
-**ToDo: draw scematic**
+![5-mcp3008-board-wiring](fotos/ADCblock.pdf)
 
 	### chip Wiring mcp3008 ###
 	# MCP3008 CLK to Pi SCLK
@@ -65,11 +71,20 @@ small interface board soldered on striped perfboard to connect mcp3008 with pin 
 
 ![5-mcp3008-board-wiring](fotos/5-mcp3008-board-wiring.JPG)
 
-- top side: 4 SPI lines miso, mosi, clk, chip Select (P5)
-- right bottom: JST connector for power from Paspi
-- bottom left: 3 analog lines + GND to switch board. Analog lines are pulled-up with 10k to +3.3V (red).
-- bottom middle: 3 analog lines + 3.3V + GND to joystick/pot
 
+
+
+- top side: 
+````
+PIN nr.	1   2   3   4   5   6   7   8		
+		+,  +,  -,  MI, MO, CL, CS, -	
+4 SPI lines to Raspi are miso, mosi, clk, chip Select (P5)
+
+- bottom left: 3 analog lines + GND to switch board. Analog lines are pulled-up with 10k to +3.3V (red).
+- bottom middle pins [4,5] not connected. 
+- bottom right: 3 analog lines + 3.3V + GND to joystick/pot
+- bottom far right: JST connector for power from Raspi
+````
 ![5-mcp3008-board-wiring](fotos/6-mcp3008-board-closeup.JPG)
 ![5-mcp3008-board-wiring](fotos/7-mcp3008-board-back.JPG)
 back side foto mirrors horizontally
@@ -79,7 +94,7 @@ back side foto mirrors horizontally
 Soldered on small vertically striped perfboard. 
 Connects to mcp3008 with 4 wires only: gnd and 3 analog lines, each carrying signal for 2 switches. 
 
-**ToDo: draw scematic**
+![8-input-switches-front](fotos/BUTTONblock.pdf)
 
 - upper middle switch is a 1P2T switch, rest are momentary buttons (keys), normally off. 
 - lower 3 switches are connected to ground via 10k; 
