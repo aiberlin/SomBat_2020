@@ -3,7 +3,7 @@
 - track wiring precisely - otherwise Python code needs to be adapted for each individual item. 
 
 
-DONE: 
+**// DONE: **
 
 add 1 RGB LED to 3 GPIO pins of Raspi: pins [23, 24, 25] on Audio Bonnet
 add 1 R power LED across 5V
@@ -57,7 +57,7 @@ A 4 stranded flat wire goes to the mcp3008 board, as well as
 ### 5. mcp3008-board-wiring
 
 small interface board soldered on striped perfboard to connect mcp3008 with pin headers to interface elements AND SPI on AudioBonnet. 
-![5-mcp3008-board-wiring](fotos/ADCblock.pdf)
+![ADCblock.pdf](fotos/ADCblock.pdf)
 
 	### chip Wiring mcp3008 ###
 	# MCP3008 CLK to Pi SCLK
@@ -94,7 +94,7 @@ back side foto mirrors horizontally
 Soldered on small vertically striped perfboard. 
 Connects to mcp3008 with 4 wires only: gnd and 3 analog lines, each carrying signal for 2 switches. 
 
-![8-input-switches-front](fotos/BUTTONblock.pdf)
+![BUTTONblock.pdf](fotos/BUTTONblock.pdf)
 
 - upper middle switch is a 1P2T switch, rest are momentary buttons (keys), normally off. 
 - lower 3 switches are connected to ground via 10k; 
