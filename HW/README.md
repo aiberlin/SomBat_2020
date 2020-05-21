@@ -1,10 +1,10 @@
 **// ToDo:**
-- draw schematics of button board
-- document LED wiring !!
+- document LED wiring !
 - track wiring precisely - otherwise Python code needs to be adapted for each individual item. 
 
 
-DONE
+DONE: 
+
 add 1 RGB LED to 3 GPIO pins of Raspi: pins [23, 24, 25] on Audio Bonnet
 add 1 R power LED across 5V
 DONE:
