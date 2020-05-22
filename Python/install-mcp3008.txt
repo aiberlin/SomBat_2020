@@ -1,8 +1,0 @@
-# install the python driver 
-sudo pip3 install adafruit-circuitpython-mcp3xxx
-
-# OSC: https://pypi.org/project/python-osc/
-sudo pip3 install python-osc
-
-sudo pip3 install RPI.GPIO
-
