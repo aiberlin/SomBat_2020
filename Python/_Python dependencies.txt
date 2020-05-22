@@ -1,0 +1,9 @@
+# install python driver for AudioBonnet Audio DAC
+sudo pip3 install adafruit-circuitpython-mcp3xxx
+
+# OSC library: https://pypi.org/project/python-osc/
+sudo pip3 install python-osc
+
+# smart RGB LED driver
+sudo pip3 install RPI.GPIO
+

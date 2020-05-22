@@ -1,17 +1,39 @@
-**// ToDo:**
-- document LED wiring !
-- track wiring precisely - otherwise Python code needs to be adapted for each individual item. 
+**// ToDo Fri:**
+
+- test adc/button-blocks with a pi!!
+
+- assemble (clone) 1 other device to leave here
+- prep. Linux, 
+
+- document LED wiring ! 
+	[x] illu
+	[-] Markdown
+		led = RGBLED(25, 22, 24)
+
+- document Python depencdencies
+
+
+- x track wiring precisely - otherwise Python code needs to be adapted for each individual item. 
+
+- Package
+	[-] megaphones
+	[-] counted parts 2 each
+	[-] accessories: 
+		- cable, 
+		- header pins
+		- LED 
+
+
+
+
+
 
 
 **// DONE: **
 
 add 1 RGB LED to 3 GPIO pins of Raspi: pins [23, 24, 25] on Audio Bonnet
 add 1 R power LED across 5V
-DONE:
-	- write SC>OSC>Python code for LED. 
-    - solid color for Synth mode
-    - slowly blinking for Sample mode
-    - hsv cycle thru the synth list / sample list in the respective modes. 
+
 
 
 # SomBat_2020 - Hardware overview
@@ -50,7 +72,7 @@ Audio Bonnet on Raspi accomodates pin headers for connecting
 - We connect a header row to:
 [MOS, MIS, CLK, empty(CE0), empty(CE1), Pin5]
 A 4 stranded flat wire goes to the mcp3008 board, as well as
-- GND + 3.3V from pin triple near the audio jack. 
+- • GND and • +3.3V from power pin triple near the audio jack. 
 
 ![4-AudioBonnet-MOSI til Pin5, GND + 3.3V](fotos/4-AudioBonnet.JPG)
 
