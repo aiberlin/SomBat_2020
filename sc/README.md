@@ -3,18 +3,17 @@
  everything SuperCollider related
 
 ####ToDo:
-- merge nu osx code into linux code, incl. local Quarks and all
 - unify code for linux headless and laptop, with better instructions for laptop use. 
 - add cheat key combos for ending all current sounds: both switches together. 
-- don't use pot for amp - use amp's pot instead! So, pot is free as mod wheel ... :)
-- granular player for long samples ! overlap, don't stop, for polyphonic textures. stop 'em with the cheat. Joy maps to stretch and pitch. 
-- add a Master FX ? Safty net etc. 
+- don't use pot for amp - use amp's pot instead! So, pot is free as mod wheel :) write mod use into SynthDefs - as self moving instead of statc snds. 
+- [x] granular player for long samples ! overlap, don't stop, for polyphonic textures. stop 'em with the cheat. Joy maps to stretch and pitch. 
 - adjust levels of loud ones to the softer ones. 
+- add a Master FX ? Safty net etc. 
 
 ## SC Folder Structure:
 
 ### scwork
-this goes into Raspi's home dir; 
+This goes into Raspi's home dir.
 
 ### scwork/autoload
 - sclang is told to start with file ~/scwork/_startup.scd and the rest will autostart automagically. (Routine that loads all *.scd files in the "autoload" subdir)
@@ -42,16 +41,21 @@ ToDo: find right place for them in Raspi's dir structure so sclang finds 'em. >>
 
 -  include Quarks location in yaml:
 - add yaml path as -l option to sclang call in autostart:
+
 ```    
-    ./sclang -a -l ~/path/to/sclang_sombat.yaml mycode.scd
+#./sclang -a -l ~/path/to/sclang_sombat.yaml mycode.scd
+
+sclang -a -l ~/scwork/sclang_sombat.yaml ~/scwork/_startup.scd &> ~/scwork/sombat.log
+
 ```
+
+### defaultSounds
+
+we look for sounds stored on external memory stick (automounting via fstab entry), 
+but if stick is absent, we load these. 
 
 
 ### scwork/unused
 scraps and recyclables
 
-### defaultSounds
-
-we look for sounds stored on external memory stick (fstab entry!), 
-but if absent, we can load these. 
-
+### e.o.f.
