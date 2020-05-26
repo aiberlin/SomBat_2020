@@ -1,31 +1,51 @@
 #  SomBat_2020 Box 
  
 Houses the electronics.
-made from 3 and 5 mm plywood; sawed or laser cut.
+made from 3 mm birch plywood; sawed/drilled or laser cut.
+
+Laser cut files (untested) are in subfolder [/sombat2020_laser-cut](/sombat2020_laser-cut)
+
+![case dimensions](Renders2/sombat_case_v11.png)
+![case dimensions](Renders2/sombat_case.png)
+
 
 ### Case dimensions
-![case dimensions](01_sombat_case_size.png)
+![case dimensions](Renders2/sombat_case_SIZE.png)
 ### Top 
 houses
-- 2 screw holes for fixing on Megaphone
+
 - joystick
 - RGB indicator LED
 - Power LED
+- 2 7mm screw holes for fixing on Megaphone
+- 4 3mm screw holes for fixing Raspi
 
-![case top](02_sombat_case_top.png)
+![case top](Renders2/sombat_case_TOP.png)
 
 
 ### Right panel
 houses
+
 - power switch
-- Pot "Modulation" Pot (Raspi)
+- "Modulation" Pot (Raspi)
 - Volume Pot (Amp)
 
-![case right](03_sombat_case_rightside.png)
+![case right](Renders2/sombat_case_RIGHT.png)
 
 
 ### Front panel
 houses
-- switch board
 
-![case Top](04_sombat_case_Front.png)
+- switch board only
+
+![case Top](Renders2/sombat_case_FRONT.png)
+
+### Bottom panel
+- exit for the speaker wire
+- screws for Amp Board
+
+![case Top](Renders2/sombat_case_BOTTOM.png)
+
+
+### Mounting screws
+2 x 6mm diam, 10mm long. 
