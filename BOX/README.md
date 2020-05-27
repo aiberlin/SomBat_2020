@@ -4,8 +4,8 @@ Houses the electronics.
 made from 3 mm birch plywood; sawed/drilled or laser cut.
 
 ### ToDo	change: 
-- joystick 1 box size backwards/inwards
-- raspi: 7mm outwards. 
+- joystick: move 1 box size backwards/inwards
+- raspi: move 7mm outwards. 
 
 Laser cut files (untested) are in subfolder /sombat2020_laser-cut
 
