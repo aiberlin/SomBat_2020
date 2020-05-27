@@ -52,5 +52,7 @@ houses
 ![case Top](Renders2/sombat_case_BOTTOM.png)
 
 
-### Mounting screws
-2 x 6mm diam, 10mm long. 
+### Screws
+
+- Mounting on Megaphone: 2 x 6mm diam, 10mm long. 
+- for amp and Raspi: M3, 15mm long
