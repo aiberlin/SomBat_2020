@@ -1,11 +1,11 @@
 **// ToDo Fri:**
 
 
-- [ ] raspi 177 mm nach links!
-- [ ] doc minijack audio conn.
+- [ ] raspi 17 mm nach links!
+- [x] doc minijack audio conn.
 
 - [x] ADCs: solder all chans 4,5 to GND!
-- [ ] glue stix f batt h.
+- [x] glue stix f batt h.
 - [x] add to Docu Box design from Isak
 - [ ] assemble (clone) 1 other device to leave here
 - [ ] prep. Linux !! 
@@ -26,9 +26,10 @@
 - Package
 
 	• main parts, counted parts 2-3-4 each: 
-	- [ ] 2 x megaphone
-	- [ ] 2 x soldered block: ADC
-	- [ ] 2 x soldered block: Buttons
+	- [ ] 2 x Raspi
+	- [ ] 2 x Megaphone
+	- [x] 2 x soldered block: ADC
+	- [x] 2 x soldered block: Buttons
 	- [x] 4 x RGB LEDs, Power LED, R's
 	- [x] 2 x power switch
 	- [x] 2 x step-down buck
@@ -41,7 +42,7 @@
 	• accessories: 
 	- [x] 2 x cable USB for power
 	- [x] 2 x cable mini jack
-	- [ ] 2 m generic cable
+	- [x] 2 m generic cable
 	- [ ] 4 x Pot heads
 	- [x] 2 x screws
 
