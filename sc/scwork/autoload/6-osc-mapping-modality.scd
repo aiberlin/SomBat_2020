@@ -61,7 +61,7 @@ if (q.myname == "adc") {
 	'/1/fader1',
 	'/1/toggleM',
 	'/1/switch1',
-	'/1/switch1',
+	'/1/switch2',
 	'/1/trig1',
 	'/1/trig2',
 	'/1/trig3'
@@ -81,17 +81,22 @@ if (q.myname == "adc") {
 // ***********************************************************************
 // ***********************************************************************
 (
-/// basic continuous ctl > right to Server
-
-q.mktl.elAt(\fader).action = {arg el; Ndef(\ampBus).set(\amp, \amp.asSpec.map(el.value).postln) };
+// basic continuous ctl > right to Server
 q.mktl.elAt(\xy, \x).action = {arg el; Ndef(\joystick).set(\x, (el.value)) };
-q.mktl.elAt(\xy, \y).action = {arg el; Ndef(\joystick).set(\y, (1-el.value)) };
+
+q.mktl.elAt(\xy, \y).action = {arg el; Ndef(\joystick).set(\y, (el.value); ) };
+q.mktl.elAt(\fader).action = {arg el; Ndef(\ampBus).set(\amp, \amp.asSpec.map(el.value)) };
+
+q.mktl.elAt(\xy, \y).action = {arg el; "joY! ".post; Ndef(\joystick).set(\y, (el.value).postln; ) };
+q.mktl.elAt(\fader).action = {arg el; "pot! ".post; Ndef(\ampBus).set(\amp, \amp.asSpec.map(el.value).postln) };
 );
 
 // ***********************************************************************
 // ***********************************************************************
-// client side Button handling, modes!
-// q.mktl.elAt(\toggle).value;
+/*// client side Button handling, modes!
+      q.mktl.elAt(\toggle).value;
+      q.mktl.elAt(\xy, \y).value;
+*/
 (
 // ***********************************************************************
 // 1. toggle for modes

@@ -25,7 +25,7 @@
 	(
 		// devel
 		q.verbose = true;
-//		q.hasGui = true;
+/*		q.hasGui = true;*/
 	);
 	s.latency_( nil );
 
@@ -39,10 +39,10 @@
 
 
 
-	"*** hh autostart script running".postln;
+	"*** hh autostart script running.".postln;
 
 /*
-	// better do this outside.
+// better do this outside in shell script
 	if(q.verbose){	"\n*** killing all Pythons".postln };
 	unixCmd ("sudo killall python3");
 	1.wait;
@@ -54,16 +54,18 @@
 
 	// q.rebootPy.resume.play;
 
+
 	q.rebootJack = {
 //		{
-			Server.killAll;
+
+		Server.killAll;
 			"*** killing jackd".postln;
 			"killall jackd".unixCmd;
-			2.wait;
+			1.wait;
 			"*** starting jackd".postln;
 			"sudo jackd -P75 -p32 -t2000 -dalsa -dhw:0 -p64 -n2 -s -r48000 -P &".unixCmd;
-			2.wait;
-			"end".postcln
+			1.wait;
+			"end jkackstart".postcln
 //		}.forkIfNeeded;
 	};
 
@@ -74,11 +76,11 @@
 	s.waitForBoot{
 		var filesToLoad = ( thisProcess.nowExecutingPath.dirname +/+ "/autoload/*.scd").pathMatch.sort;
 
-		"*** s.booted".postln;
+		"*** s.booted!!".postln;
 		filesToLoad.do{|p, i|
 			if(q.verbose) { "*** loading autostart file %\n".postf(p.basename) };
 			p.load;
-			[2.5, 0.5].clipAt(i).wait;
+			[0.5, 2.5, 0.5].clipAt(i).wait;
 		}
 	}
 }.fork;

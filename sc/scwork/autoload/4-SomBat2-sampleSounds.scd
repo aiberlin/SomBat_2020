@@ -13,7 +13,7 @@ Spec.add(\buf, [q.bufNums.all.first, q.bufNums.all.last, 0, 1]);
 // Spec.add(\gateSomBat, \unipolar);
 
 
-Ndef('sampleJoy', { |buf=100, gateSomBat=0, loop=0|
+Ndef('sampleJoy', { |buf=0, gateSomBat=0, loop=0|
 	var rate   = Ndef(\joystick).kr(1, 0).linexp(0,1, 1/3, 3);       // X
 	var amp = Ndef(\joystick).kr(1, 1).squared; // Y
 
@@ -22,7 +22,7 @@ Ndef('sampleJoy', { |buf=100, gateSomBat=0, loop=0|
 
 
 
-Ndef('sampleJoyLoop', { |buf=100, gateSomBat=0|
+Ndef('sampleJoyLoop', { |buf=0, gateSomBat=0|
 	var rate   = Ndef(\joystick).kr(1, 0).linexp(0,1, 1/3, 3);       // X
 	var loopSpeed = Ndef(\joystick).kr(1, 1).linexp(0,1, 0.3, 3);    // Y
 	var imp = Impulse.kr(loopSpeed);
@@ -32,7 +32,7 @@ Ndef('sampleJoyLoop', { |buf=100, gateSomBat=0|
 
 
 
-Ndef('sampleJoyLoop2', { |buf=100, gateSomBat=0|
+Ndef('sampleJoyLoop2', { |buf=0, gateSomBat=0|
 	var rate   = Ndef(\joystick).kr(1, 0).linexp(0,1, 1/3, 3);       // X
 	var dur = BufDur.kr(buf) / rate;
 	var loopSpeed = Ndef(\joystick).kr(1, 1).linexp(0,1, 1/8, 4);    // Y
@@ -43,7 +43,7 @@ Ndef('sampleJoyLoop2', { |buf=100, gateSomBat=0|
 	snd.madd(gateSomBat * Ndef(\ampBus).kr(1) ).dup;
 } );
 
-Ndef('sampleJoyLoopCut', { |buf=100, gateSomBat=0|
+Ndef('sampleJoyLoopCut', { |buf=0, gateSomBat=0|
 	var cutFrames  = Ndef(\joystick).kr(1, 0) * BufFrames.kr(buf);       // X
 	var dur = BufDur.kr(buf);
 	var loopSpeed = Ndef(\joystick).kr(1, 1).linexp(0,1, 1/8, 4);    // Y

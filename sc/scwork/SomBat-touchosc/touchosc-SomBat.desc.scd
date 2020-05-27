@@ -79,13 +79,13 @@ protocol: \osc,
 deviceType: \phoneApp,
 elementTypes: [\accelerometer, \fader, \button],
 status: (
-	linux: "unknown",
+	linux: "tested on Raspi",
 	osx: "tested and working. 2020-04-14, HH.",
 	win: "unknown"
 ),
 
 idInfo: "touchOSC-SomBat",
-netAddrInfo: (srcPort: 9000, recvPort: 57120, ipAddress: "192.168.178.181"),
+netAddrInfo: (srcPort: 9000, recvPort: 57120, ipAddress: "127.0.0.1"),
 
 deviceInfo: (
 	longName: "touchOSC - SomBat Layput (Single page)"

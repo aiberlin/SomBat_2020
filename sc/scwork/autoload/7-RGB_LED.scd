@@ -46,7 +46,7 @@ Tdef(\led, {|ev|
 
 		var state = q.osc.indices[q.osc.mode];
 		var hue = (state + cIndex % ev.num) / ev.num;
-		var bright = (1-q.mktl.elAt(\xy, \y).value).sqrt * 0.95 + 0.05;
+		var bright = (q.mktl.elAt(\xy, \y).value).sqrt * 0.95 + 0.05;
 		if(q.osc.mode == \sample){  bright = bright * strobeSamp }{  bright = bright * strobeSynth };
 		col = Color.hsv(hue.frac, 1, bright, 1);
 

@@ -1,3 +1,7 @@
+
+# normally on patch, confog files are in
+# /home/patch/.config/SuperCollider
+# call by
 # ./sclang -a -l ~/supercolliderStandaloneRPI2/sclang.yaml mycode.scd
 
 # these 2 paths must be correct:
