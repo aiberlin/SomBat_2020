@@ -88,6 +88,8 @@ you should hear the infamous loading sound :)
 	# sudo mdir /mnt/sombat2020 # make dir once !!
 	dev/sda1 /mnt/sombat2020 vfat defaults,auto,users,rw,nofail,umask=000,x-systemd$
 	
-In my tests [on patchbox OS], this works, but unreliable! some boots are OK, others fail.
+In my tests [on patchbox OS], this works, but unreliable. some boots are OK, others fail.
 
 
+#### When git-synching into PiCore, 
+you can delete everything apart from scwork and Python folders. the shell script to start all is in /scwork/start_sombat2020.sh
