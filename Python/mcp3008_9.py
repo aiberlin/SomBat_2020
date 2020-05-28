@@ -29,7 +29,7 @@ potMax = 50000
 
 ### button vars
 # button addresses: 
-buttonAddrs = [ ['1/switch1', '1/trig1'], ['1/switch2', '1/trig3'], ['1/toggleM', '1/trig2'] ]
+buttonAddrs = [ ['/1/switch1', '/1/trig1'], ['/1/switch2', '/1/trig3'], ['/1/toggleM', '/1/trig2'] ]
 buttonStates    = [0, 0, 0]
 buttonStatesOld = [0, 0, 0]
 #         66 45 32 26 
