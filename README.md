@@ -1,6 +1,6 @@
 # SomBat_2020
  
- New firmware/software for [*SomBat* musical weapon](http://www.earweego.net/#SomBat). Based on Raspi & SuperCollider. 
+ New firmware/software for the [*SomBat* musical weapon](http://www.earweego.net/#SomBat). Based on Raspi & SuperCollider. 
 
 ## HW
 
